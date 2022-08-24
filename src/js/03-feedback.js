@@ -3,13 +3,13 @@ import throttle from 'lodash.throttle';
 const form = document.querySelector('.feedback-form');
 const inputForm = document.querySelector('input');
 const textareaForm = document.querySelector('textarea');
-const btn = document.querySelector('button')
 
 form.addEventListener('input', throttle(onInputText), 500);
 form.addEventListener('submit', onFormSubmit);
 const KEY_STORAGE = "feedback-form-state";
 
 let getData = null;
+checkData();
 
 const saveData = {
     email: getData?.email ? getData.email : "",
@@ -48,9 +48,5 @@ function onFormSubmit(event) {
     
     console.log(saveData);
 }
-
-
-
-
 
 
