@@ -17,18 +17,3 @@ const saveTime = localStorage.getItem(KEY_STORAGE);
 player.setCurrentTime(saveTime);
    
 
-
-
-
-// const iframePlayer = new Vimeo.Player(iframe);
-
-
-
-
-
-
-
-
-// // Select with the `<iframe>`’s id
-// // Assumes that there is an <iframe id="player1"> on the page.
-// const idPlayer = new Vimeo.Player('player1');

@@ -26,7 +26,7 @@ function createPhotoGalleryMarkup(galleryItems) {
 };
 galleryBox.insertAdjacentHTML('beforeend', galleryMarkup);
 
-const instance = new SimpleLightbox('.gallery a');
+const instance = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
 
 
 function onGalleryBoxClick(event) {
@@ -34,6 +34,7 @@ function onGalleryBoxClick(event) {
   if (!event.target.classList.contains('gallery__image')) {
     return;
   };
+   
 
 
   galleryBox.addEventListener('keydown', onCloseModalEscPress);
